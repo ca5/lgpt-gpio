@@ -46,19 +46,19 @@ events = (uinput.KEY_ENTER, uinput.KEY_J, uinput.KEY_UP, uinput.KEY_DOWN, uinput
 device = uinput.Device(events)
 
 # for activate Piggy tracker
-device.emit(uinput.KEY_ENTER, 1)
-time.sleep(0.1)
-device.emit(uinput.KEY_ENTER, 0)
+# device.emit(uinput.KEY_ENTER, 1)
+# time.sleep(0.1)
+# device.emit(uinput.KEY_ENTER, 0)
 
 # initialize GPIO
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(7, GPIO.OUT)
-GPIO.setup(11, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-GPIO_STAT[11] = GPIO.LOW
+# GPIO.setmode(GPIO.BOARD)
+# GPIO.setup(7, GPIO.OUT)
+# GPIO.setup(11, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+# GPIO_STAT[11] = GPIO.LOW
 
 # listen GPIO in background
-gpio_listener(11, push_j)
-blink_gpio(7)
+# gpio_listener(11, push_j)
+# blink_gpio(7)
 
 while True:
     time.sleep(10)
